@@ -1,0 +1,45 @@
+{
+  "type": "record",
+  "name": "User",
+  "namespace": "com.example.kafka.examples",
+  "doc": "Example User entity schema - Version 2 (backward compatible)",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "Unique user identifier"
+    },
+    {
+      "name": "email",
+      "type": "string",
+      "doc": "User email address"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "doc": "User full name"
+    },
+    {
+      "name": "createdAt",
+      "type": "long",
+      "doc": "Timestamp when user was created (epoch millis)"
+    },
+    {
+      "name": "phone",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Optional phone number (added in v2)"
+    },
+    {
+      "name": "status",
+      "type": {
+        "type": "enum",
+        "name": "UserStatus",
+        "symbols": ["ACTIVE", "INACTIVE", "PENDING"]
+      },
+      "default": "ACTIVE",
+      "doc": "User status (added in v2)"
+    }
+  ]
+}
+

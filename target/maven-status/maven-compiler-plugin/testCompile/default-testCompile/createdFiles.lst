@@ -1,0 +1,11 @@
+com/example/kafka/producer/SendResultDataTest.class
+com/example/kafka/consumer/ConsumedMessageTest.class
+com/example/kafka/config/KafkaConfigTest.class
+com/example/kafka/exception/ExceptionTest.class
+com/example/kafka/schema/SchemaValidatorFactoryTest.class
+com/example/kafka/registry/SchemaRegistryManagerTest.class
+com/example/kafka/consumer/KafkaConsumerTest.class
+com/example/kafka/schema/JsonSchemaValidatorTest.class
+com/example/kafka/consumer/HttpForwarderTest.class
+com/example/kafka/schema/AvroSchemaValidatorTest.class
+com/example/kafka/producer/KafkaProducerTest.class

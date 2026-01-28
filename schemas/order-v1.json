@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/order-v1.json",
+  "title": "Order",
+  "description": "Example Order entity schema - Version 1",
+  "type": "object",
+  "required": ["orderId", "customerId", "items", "totalAmount", "createdAt"],
+  "properties": {
+    "orderId": {
+      "type": "string",
+      "description": "Unique order identifier"
+    },
+    "customerId": {
+      "type": "string",
+      "description": "Customer who placed the order"
+    },
+    "items": {
+      "type": "array",
+      "description": "Order line items",
+      "items": {
+        "type": "object",
+        "required": ["productId", "quantity", "price"],
+        "properties": {
+          "productId": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "price": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "totalAmount": {
+      "type": "number",
+      "description": "Total order amount",
+      "minimum": 0
+    },
+    "createdAt": {
+      "type": "integer",
+      "description": "Timestamp when order was created (epoch millis)"
+    }
+  }
+}
+
